@@ -28,7 +28,7 @@
 
 
 
-<link rel="icon" href="/Total3D/images/favicon.png">
+<link rel="icon" href="/images/favicon.png">
 
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
@@ -42,7 +42,7 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
 
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/Total3D/css/style.css">
 
 
 <script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
@@ -68,7 +68,7 @@
 <nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item navbar-logo" href="/">
+            <a class="navbar-item navbar-logo" href="/Total3D/">
                 
                     
                     <img src="/Total3D/images/logo.png" alt="" height="28">
@@ -116,7 +116,7 @@
         <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            <a href="/2020/06/28/ProjectPage/" itemprop="url">Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes from a Single Image (CVPR20 Oral)</a>
+            <a href="/Total3D/2020/06/28/ProjectPage/" itemprop="url">Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes from a Single Image (CVPR20 Oral)</a>
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -129,7 +129,7 @@
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
         <html><head></head><body><p><a href="http://yinyunie.github.io/" target="_blank" rel="noopener">Yinyu Nie</a><sup>1,2,3</sup>, <a href="https://mypage.cuhk.edu.cn/academics/hanxiaoguang/" target="_blank" rel="noopener">Xiaoguang Han</a><sup>2,3</sup>, <a href="http://guoshihui.net/" target="_blank" rel="noopener">Shihui Guo</a><sup>4</sup>, <a href="https://paulyzheng.github.io/about/" target="_blank" rel="noopener">Yujian Zheng</a><sup>2,3</sup>, <a href="https://staffprofiles.bournemouth.ac.uk/display/jchang" target="_blank" rel="noopener">Jian Chang</a><sup>1</sup>, <a href="https://jzhang.bournemouth.ac.uk/" target="_blank" rel="noopener">Jian J Zhang</a><sup>1</sup> <br><br><sup>1</sup>Bournemouth University, <sup>2</sup>The Chinese University of Hong Kong, Shenzhen<br><sup>3</sup>Shenzhen Research Institute of Big Data, <sup>4</sup>Xiamen University</p>
-<img align="left" src="/Total3D/images/teaser.jpg" width="80%" height="80%">
+<img align="left" src="/images/teaser.jpg" width="80%" height="80%">
 From a single image (left), we simultaneously predict the contextual knowledge including room layout, camera pose, and 3D object bounding boxes (middle) and reconstruct object meshes (right).
 
 <hr>
@@ -139,7 +139,7 @@ From a single image (left), we simultaneously predict the contextual knowledge i
 <hr>
 <h3 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h3><p>If you are inspired by our work, please consider citing:<br></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@InProceedings{Nie_2020_CVPR,</span><br><span class="line">author = {Nie, Yinyu and Han, Xiaoguang and Guo, Shihui and Zheng, Yujian and Chang, Jian and Zhang, Jian Jun},</span><br><span class="line">title = {Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes From a Single Image},</span><br><span class="line">booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},</span><br><span class="line">month = {June},</span><br><span class="line">year = {2020}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
 <hr>
-<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><img align="left" src="/Total3D/images/method.jpg" width="100%" height="100%">
+<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><img align="left" src="/images/method.jpg" width="100%" height="100%">
 The network architecture follows a &#x2018;box-in-the-box&#x2019; manner and consists of three modules: 1. Layout Estimation Network (LEN); 2. 3D Object Detection Network (ODN); 3. Mesh Generation Network (MGN). From a single image, we first predict 2D object bounding boxes with Faster RCNN. LEN takes the full image as input and produces the camera pose and the layout bounding box. Given the 2D detection of objects, ODN detects the 3D object bounding boxes in the camera system, while MGN generates the mesh geometry in their object-centric system. We reconstruct the full-scene mesh by embedding the outputs of all networks together with joint training and inference, where object meshes from MGN are scaled and placed into their bounding boxes (by ODN) and transformed into the world system with the camera pose (by LEN).
 
 <hr>
@@ -329,7 +329,7 @@ The network architecture follows a &#x2018;box-in-the-box&#x2019; manner and con
 
 
 
-<script src="/js/script.js"></script>
+<script src="/Total3D/js/script.js"></script>
 
 
     
