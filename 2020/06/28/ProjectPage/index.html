@@ -23,14 +23,14 @@
 <meta property="og:site_name" content="Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes from a Single Image">
 <meta property="og:description" content="Yinyu Nie1,2,3, Xiaoguang Han2,3, Shihui Guo4, Yujian Zheng2,3, Jian Chang1, Jian J Zhang1 1Bournemouth University, 2The Chinese University of Hong Kong, Shenzhen3Shenzhen Research Institute of Big Da">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/images/teaser.jpg">
+<meta property="og:image" content="http://yoursite.com/Total3D/images/teaser.jpg">
 <meta property="og:image" content="http://img.youtube.com/vi/tq7jBhfdszI/0.jpg">
-<meta property="og:image" content="http://yoursite.com/images/method.jpg">
+<meta property="og:image" content="http://yoursite.com/Total3D/images/method.jpg">
 <meta property="article:published_time" content="2020-06-27T23:46:32.000Z">
-<meta property="article:modified_time" content="2020-06-28T01:36:28.232Z">
+<meta property="article:modified_time" content="2020-06-28T01:39:33.139Z">
 <meta property="article:author" content="Total3DUnderstanding Team">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/images/teaser.jpg">
+<meta name="twitter:image" content="http://yoursite.com/Total3D/images/teaser.jpg">
 
 
 
@@ -136,9 +136,7 @@
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
         <html><head></head><body><p><a href="http://yinyunie.github.io/" target="_blank" rel="noopener">Yinyu Nie</a><sup>1,2,3</sup>, <a href="https://mypage.cuhk.edu.cn/academics/hanxiaoguang/" target="_blank" rel="noopener">Xiaoguang Han</a><sup>2,3</sup>, <a href="http://guoshihui.net/" target="_blank" rel="noopener">Shihui Guo</a><sup>4</sup>, <a href="https://paulyzheng.github.io/about/" target="_blank" rel="noopener">Yujian Zheng</a><sup>2,3</sup>, <a href="https://staffprofiles.bournemouth.ac.uk/display/jchang" target="_blank" rel="noopener">Jian Chang</a><sup>1</sup>, <a href="https://jzhang.bournemouth.ac.uk/" target="_blank" rel="noopener">Jian J Zhang</a><sup>1</sup> <br><br><sup>1</sup>Bournemouth University, <sup>2</sup>The Chinese University of Hong Kong, Shenzhen<br><sup>3</sup>Shenzhen Research Institute of Big Data, <sup>4</sup>Xiamen University</p>
-<img align="left" src="/images/teaser.jpg" width="80%" height="80%">
-From a single image (left), we simultaneously predict the contextual knowledge including room layout, camera pose, and 3D object bounding boxes (middle) and reconstruct object meshes (right).
-
+<p><img align="left" src="/Total3D/images/teaser.jpg" width="80%" height="80%"> <br><br>From a single image (left), we simultaneously predict the contextual knowledge including room layout, camera pose, and 3D object bounding boxes (middle) and reconstruct object meshes (right).</p>
 <hr>
 <h3 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h3><p>Semantic reconstruction of indoor scenes refers to both scene understanding and object reconstruction. Existing<br>works either address one part of this problem or focus on independent objects. In this paper, we bridge the gap between understanding and reconstruction, and propose an end-to-end solution to jointly reconstruct room layout, object bounding boxes and meshes from a single image. Instead of separately resolving scene understanding and object reconstruction, our method builds upon a holistic scene context and proposes a coarse-to-fine hierarchy with three components: 1. room layout with camera pose; 2. 3D object bounding boxes; 3. object meshes. We argue that understanding the context of each component can assist the task of parsing the others, which enables joint understanding and reconstruction. The experiments on the SUN RGBD and Pix3D datasets demonstrate that our method consistently outperforms existing methods in indoor layout estimation, 3D object detection and mesh reconstruction.</p>
 <hr>
@@ -146,9 +144,7 @@ From a single image (left), we simultaneously predict the contextual knowledge i
 <hr>
 <h3 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h3><p>If you are inspired by our work, please consider citing:<br></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@InProceedings{Nie_2020_CVPR,</span><br><span class="line">author = {Nie, Yinyu and Han, Xiaoguang and Guo, Shihui and Zheng, Yujian and Chang, Jian and Zhang, Jian Jun},</span><br><span class="line">title = {Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes From a Single Image},</span><br><span class="line">booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},</span><br><span class="line">month = {June},</span><br><span class="line">year = {2020}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
 <hr>
-<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><img align="left" src="/images/method.jpg" width="100%" height="100%">
-The network architecture follows a &#x2018;box-in-the-box&#x2019; manner and consists of three modules: 1. Layout Estimation Network (LEN); 2. 3D Object Detection Network (ODN); 3. Mesh Generation Network (MGN). From a single image, we first predict 2D object bounding boxes with Faster RCNN. LEN takes the full image as input and produces the camera pose and the layout bounding box. Given the 2D detection of objects, ODN detects the 3D object bounding boxes in the camera system, while MGN generates the mesh geometry in their object-centric system. We reconstruct the full-scene mesh by embedding the outputs of all networks together with joint training and inference, where object meshes from MGN are scaled and placed into their bounding boxes (by ODN) and transformed into the world system with the camera pose (by LEN).
-
+<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><p><img align="left" src="/Total3D/images/method.jpg" width="100%" height="100%"> <br><br>The network architecture follows a &#x2018;box-in-the-box&#x2019; manner and consists of three modules: 1. Layout Estimation Network (LEN); 2. 3D Object Detection Network (ODN); 3. Mesh Generation Network (MGN). From a single image, we first predict 2D object bounding boxes with Faster RCNN. LEN takes the full image as input and produces the camera pose and the layout bounding box. Given the 2D detection of objects, ODN detects the 3D object bounding boxes in the camera system, while MGN generates the mesh geometry in their object-centric system. We reconstruct the full-scene mesh by embedding the outputs of all networks together with joint training and inference, where object meshes from MGN are scaled and placed into their bounding boxes (by ODN) and transformed into the world system with the camera pose (by LEN).</p>
 <hr>
 <h3 id="Code-and-Data"><a href="#Code-and-Data" class="headerlink" title="Code and Data"></a>Code and Data</h3><p>We provide source codes and related data of the project on <a href="https://github.com/yinyunie/Total3DUnderstanding" target="_blank" rel="noopener">https://github.com/yinyunie/Total3DUnderstanding</a></p>
 </body></html>
