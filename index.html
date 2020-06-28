@@ -1,196 +1,335 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
 <head>
-  <meta charset="utf-8">
-  
+    <meta charset="utf-8">
+<title>Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes from a Single Image</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
-  <title>Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes from a Single Image</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="">
+
+
+
+
+
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes from a Single Image">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes from a Single Image">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Total3DUnderstanding Team">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes from a Single Image" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
+
+
+
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
 <link rel="stylesheet" href="/css/style.css">
 
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
 <meta name="generator" content="Hexo 4.2.1"></head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes from a Single Image</a>
-      </h1>
-      
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                <img src="/images/logo.png" alt="" height="28">
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="https://github.com/yinyunie/Total3DUnderstanding">Code</a>
+            
+            <a class="navbar-item "
+               href="https://arxiv.org/abs/2002.12212">Paper</a>
+            
+            <a class="navbar-item "
+               href="https://www.youtube.com/watch?v=tq7jBhfdszI">Talk</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/yinyunie/Total3DUnderstanding" target="_blank" rel="noopener">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/27/hello-world/" class="article-date">
-  <time datetime="2020-06-27T16:50:23.753Z" itemprop="datePublished">2020-06-27</time>
-</a>
+</nav>
+
+    <section class="section">
+    <div class="container">
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+        <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/27/hello-world/">Hello World</a>
+            <a href="/2020/06/28/ProjectPage/" itemprop="url">Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes from a Single Image (CVPR20 Oral)</a>
+        
     </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2020-06-27T23:46:32.000Z" itemprop="datePublished">Jun 28 2020</time>
+        </span>
+        
+        
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/27/hello-world/" data-id="ckbxvyjvf0000egioh300295l" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p><a href="http://yinyunie.github.io/" target="_blank" rel="noopener">Yinyu Nie</a><sup>1,2,3</sup>, <a href="https://mypage.cuhk.edu.cn/academics/hanxiaoguang/" target="_blank" rel="noopener">Xiaoguang Han</a><sup>2,3</sup>, <a href="http://guoshihui.net/" target="_blank" rel="noopener">Shihui Guo</a><sup>4</sup>, <a href="https://paulyzheng.github.io/about/" target="_blank" rel="noopener">Yujian Zheng</a><sup>2,3</sup>, <a href="https://staffprofiles.bournemouth.ac.uk/display/jchang" target="_blank" rel="noopener">Jian Chang</a><sup>1</sup>, <a href="https://jzhang.bournemouth.ac.uk/" target="_blank" rel="noopener">Jian J Zhang</a><sup>1</sup> <br><br><sup>1</sup>Bournemouth University, <sup>2</sup>The Chinese University of Hong Kong, Shenzhen<br><sup>3</sup>Shenzhen Research Institute of Big Data, <sup>4</sup>Xiamen University</p>
+<img align="left" src="/images/teaser.jpg" width="80%" height="80%">
+From a single image (left), we simultaneously predict the contextual knowledge including room layout, camera pose, and 3D object bounding boxes (middle) and reconstruct object meshes (right).
+
+<hr>
+<h3 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h3><p>Semantic reconstruction of indoor scenes refers to both scene understanding and object reconstruction. Existing<br>works either address one part of this problem or focus on independent objects. In this paper, we bridge the gap between understanding and reconstruction, and propose an end-to-end solution to jointly reconstruct room layout, object bounding boxes and meshes from a single image. Instead of separately resolving scene understanding and object reconstruction, our method builds upon a holistic scene context and proposes a coarse-to-fine hierarchy with three components: 1. room layout with camera pose; 2. 3D object bounding boxes; 3. object meshes. We argue that understanding the context of each component can assist the task of parsing the others, which enables joint understanding and reconstruction. The experiments on the SUN RGBD and Pix3D datasets demonstrate that our method consistently outperforms existing methods in indoor layout estimation, 3D object detection and mesh reconstruction.</p>
+<hr>
+<h3 id="Video"><a href="#Video" class="headerlink" title="Video"></a>Video</h3><p><a href="http://www.youtube.com/watch?v=tq7jBhfdszI" target="_blank" rel="noopener" title="Total3DUnderstanding"><img src="http://img.youtube.com/vi/tq7jBhfdszI/0.jpg" alt="teaser"></a></p>
+<hr>
+<h3 id="Citation"><a href="#Citation" class="headerlink" title="Citation"></a>Citation</h3><p>If you are inspired by our work, please consider citing:<br></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@InProceedings{Nie_2020_CVPR,</span><br><span class="line">author = {Nie, Yinyu and Han, Xiaoguang and Guo, Shihui and Zheng, Yujian and Chang, Jian and Zhang, Jian Jun},</span><br><span class="line">title = {Total3DUnderstanding: Joint Layout, Object Pose and Mesh Reconstruction for Indoor Scenes From a Single Image},</span><br><span class="line">booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},</span><br><span class="line">month = {June},</span><br><span class="line">year = {2020}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<hr>
+<h3 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h3><img align="left" src="/images/method.jpg" width="100%" height="100%">
+The network architecture follows a &#x2018;box-in-the-box&#x2019; manner and consists of three modules: 1. Layout Estimation Network (LEN); 2. 3D Object Detection Network (ODN); 3. Mesh Generation Network (MGN). From a single image, we first predict 2D object bounding boxes with Faster RCNN. LEN takes the full image as input and produces the camera pose and the layout bounding box. Given the 2D detection of objects, ODN detects the 3D object bounding boxes in the camera system, while MGN generates the mesh geometry in their object-centric system. We reconstruct the full-scene mesh by embedding the outputs of all networks together with joint training and inference, where object meshes from MGN are scaled and placed into their bounding boxes (by ODN) and transformed into the world system with the camera pose (by LEN).
+
+<hr>
+<h3 id="Code-and-Data"><a href="#Code-and-Data" class="headerlink" title="Code and Data"></a>Code and Data</h3><p>We provide source codes and related data of the project on <a href="https://github.com/yinyunie/Total3DUnderstanding" target="_blank" rel="noopener">https://github.com/yinyunie/Total3DUnderstanding</a></p>
+</body></html>
+    
+    </div>
+    
+    
 </article>
 
 
-  
 
 
+    
+    
+    </div>
 </section>
-        
-          <aside id="sidebar">
-  
-    
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2020 Total3DUnderstanding Team&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
 
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/ppoffice/hexo-theme-minos" target="_blank" rel="noopener">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/06/27/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
+    
 
 
 
 <script src="/js/script.js"></script>
 
 
-
-
-  </div>
+    
 </body>
 </html>
